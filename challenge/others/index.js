@@ -1,5 +1,6 @@
 "use strict";
 
+// Counter
 let oldCount = 0;
 let count = 0;
 
@@ -33,17 +34,27 @@ function plusFive() {
     document.getElementById("counter").innerHTML = `count: ${count}`;
 }
 
-function updateHistory() {
-    const history = document.createElement("li");
-    const event = document.createTextNode(`${oldCount} => ${count}`);
 
-    history.appendChild(event);
-    
-    document.getElementById("history").appendChild(history);
+// History
+function updateHistory() {
+
+    const element = document.createElement("li");
+    const event = document.createTextNode(`${oldCount} => ${count}`);
+    element.appendChild(event);
+
+    const delEventButton = document.createElement("button");
+    const text = document.createTextNode("Delete");
+    delEventButton.appendChild(text);
+    element.appendChild(delEventButton);
+
+    delEventButton.addEventListener("click", function() {
+        element.remove();
+    })
+
+    document.getElementById("counter-history").appendChild(element);
 }
 
 function deleteHistory() {
-    document.getElementById("history").innerHTML = "";
-
+    document.getElementById("counter-history").innerHTML = "";
 }
 
