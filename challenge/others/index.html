@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Counter</h3>
+    <p id="counter">count: 0</p>
+    <section>
+        <button onClick="minusFive();updateHistory()">-5</button>
+        <button onClick="minusOne();updateHistory()">-1</button>
+        <button onClick="reset();updateHistory()">R</button>
+        <button onClick="plusOne();updateHistory()">+1</button>
+        <button onClick="plusFive();updateHistory()">+5</button>
+    </section>
+    <div>
+        <h3>History</h3>
+        <button onClick="deleteHistory()">Delete History</button>
+        <ol id="history" type="1"></ol>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
