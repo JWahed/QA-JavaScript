@@ -41,4 +41,4 @@ function rektangles(word, width, height) {
     console.log(arr);
 }
 
-rektangles("REKT", 4, 4);
+rektangles("REKT", 2 , 2);
